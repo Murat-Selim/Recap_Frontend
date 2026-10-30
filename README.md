@@ -1,27 +1,41 @@
-# Rentcarproject
+# ReCap Frontend — Car Rental Client
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.4.
+An Angular learning client with car, brand, color, customer, rental, and car-detail screens.
 
-## Development server
+Backend: [ReCap Backend](https://github.com/Murat-Selim/Recap_Backend).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Stack
 
-## Code scaffolding
+Angular 11.2, TypeScript 4.1, Bootstrap 5 beta, and RxJS. This repository retains its original course-era dependencies.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Local setup
 
-## Build
+Use a Node.js/npm environment compatible with Angular 11 and the committed lockfile.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```sh
+git clone https://github.com/Murat-Selim/Recap_Frontend.git
+cd Recap_Frontend
+npm install
+npm start
+```
 
-## Running unit tests
+Open `http://localhost:4200`. Start the related backend separately. Service URLs in `src/app/services/` currently target `https://localhost:44375/api/`, matching the backend's IIS Express profile. If you launch the backend with `dotnet run`, update these URLs to its actual port.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Structure
 
-## Running end-to-end tests
+- `src/app/component/`: car, brand, color, customer, rental, navigation, and detail components.
+- `src/app/models/`: API response and domain models.
+- `src/app/services/`: backend HTTP clients.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Validation
 
-## Further help
+```sh
+npm run build
+npm test
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Tests use the configured Angular/Karma browser runner. Generated test files do not imply complete user-flow coverage; manually check the affected screen against the backend as well.
+
+## License
+
+No repository-wide license file is currently declared. Retain applicable course and third-party notices.
